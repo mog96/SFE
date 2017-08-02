@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="No2-6V-K3e">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stories View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StoriesViewController" customModule="SFE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="375" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H4w-3D-d2I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="377" id="9hc-rs-6YA">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="377"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9hc-rs-6YA" id="dhC-QF-sfC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jokela-family" translatesAutoresizingMaskIntoConstraints="NO" id="z8Y-p3-bPY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="z8Y-p3-bPY" secondAttribute="height" multiplier="375:232" id="OzH-qR-edD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laura + Mikko Story" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUo-PW-bWo">
+                                                    <rect key="frame" x="15" y="247" width="345" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IS5-lO-1EJ">
+                                                    <rect key="frame" x="15" y="275" width="345" height="87"/>
+                                                    <string key="text">"Mikko and Laura understand the idea that it's a virtue to give. They don't give with the idea that they're going to get something back, and that's surprisingly unique in this culture."
+
+-Bob Cruikshank (neighbor and friend)</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IS5-lO-1EJ" firstAttribute="leading" secondItem="dhC-QF-sfC" secondAttribute="leading" constant="15" id="3Yk-uT-Oa5"/>
+                                                <constraint firstAttribute="trailing" secondItem="z8Y-p3-bPY" secondAttribute="trailing" id="4tr-6m-co3"/>
+                                                <constraint firstItem="z8Y-p3-bPY" firstAttribute="leading" secondItem="dhC-QF-sfC" secondAttribute="leading" id="5Ru-xK-S6T"/>
+                                                <constraint firstItem="cUo-PW-bWo" firstAttribute="leading" secondItem="dhC-QF-sfC" secondAttribute="leading" constant="15" id="7nK-Kq-Sju"/>
+                                                <constraint firstAttribute="trailing" secondItem="IS5-lO-1EJ" secondAttribute="trailing" constant="15" id="GVU-mX-mmg"/>
+                                                <constraint firstItem="z8Y-p3-bPY" firstAttribute="top" secondItem="dhC-QF-sfC" secondAttribute="top" id="Hxo-D8-AUq"/>
+                                                <constraint firstAttribute="bottom" secondItem="IS5-lO-1EJ" secondAttribute="bottom" constant="15" id="NRa-21-WWO"/>
+                                                <constraint firstAttribute="trailing" secondItem="cUo-PW-bWo" secondAttribute="trailing" constant="15" id="Vjg-oP-TbL"/>
+                                                <constraint firstItem="IS5-lO-1EJ" firstAttribute="top" secondItem="cUo-PW-bWo" secondAttribute="bottom" constant="8" id="YrK-cl-Wo4"/>
+                                                <constraint firstItem="cUo-PW-bWo" firstAttribute="top" secondItem="z8Y-p3-bPY" secondAttribute="bottom" constant="15" id="gu0-5C-OlH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H4w-3D-d2I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BdF-mf-gZ9"/>
+                            <constraint firstAttribute="trailing" secondItem="H4w-3D-d2I" secondAttribute="trailing" id="JiH-Ta-Bw7"/>
+                            <constraint firstItem="H4w-3D-d2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aV6-IO-kPN"/>
+                            <constraint firstAttribute="bottom" secondItem="H4w-3D-d2I" secondAttribute="bottom" id="u7R-kT-Y4x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OhX-an-o1D"/>
+                    <connections>
+                        <outlet property="tableView" destination="H4w-3D-d2I" id="stA-hu-1E6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fr4-bi-s4l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="No2-6V-K3e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Atj-76-Q5B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ceq-JI-B4N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sa-vH-k8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jokela-family" width="1000" height="750"/>
+    </resources>
+</document>

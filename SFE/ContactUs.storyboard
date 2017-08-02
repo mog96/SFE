@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CONTACT US-->
+        <scene sceneID="Z3A-Lu-gxA">
+            <objects>
+                <viewController storyboardIdentifier="NewAlertVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5vg-Ut-CQH" customClass="ContactUsViewController" customModule="SFE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GSL-iJ-TrA"/>
+                        <viewControllerLayoutGuide type="bottom" id="GcN-xC-WEf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bXU-eM-VMN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-98-aUX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-UH-M6g">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELb-FV-OYN" customClass="CustomTextView" customModule="SFE" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="13" width="349" height="45"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="5Fr-1E-CLL"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PFw-Wi-tVW" customClass="CustomTextView" customModule="SFE" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="71" width="349" height="45"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="tnz-pb-l37"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="ELb-FV-OYN" firstAttribute="leading" secondItem="H8c-UH-M6g" secondAttribute="leading" constant="13" id="4gd-pQ-JLc"/>
+                                            <constraint firstAttribute="trailing" secondItem="ELb-FV-OYN" secondAttribute="trailing" constant="13" id="End-Lh-msR"/>
+                                            <constraint firstItem="ELb-FV-OYN" firstAttribute="top" secondItem="H8c-UH-M6g" secondAttribute="top" constant="13" id="PpS-qa-9Q9"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PFw-Wi-tVW" secondAttribute="bottom" constant="13" id="QZf-rH-nI9"/>
+                                            <constraint firstAttribute="trailing" secondItem="PFw-Wi-tVW" secondAttribute="trailing" constant="13" id="aYT-CC-32C"/>
+                                            <constraint firstAttribute="height" constant="603" placeholder="YES" id="ehV-Lb-48M"/>
+                                            <constraint firstItem="PFw-Wi-tVW" firstAttribute="top" secondItem="ELb-FV-OYN" secondAttribute="bottom" constant="13" id="j8r-OJ-RO3"/>
+                                            <constraint firstItem="PFw-Wi-tVW" firstAttribute="leading" secondItem="H8c-UH-M6g" secondAttribute="leading" constant="13" id="k5M-af-s1p"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="c9B-Vd-ueO" appends="YES" id="7hU-1q-TMt"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="H8c-UH-M6g" secondAttribute="trailing" id="0TW-Dx-kBc"/>
+                                    <constraint firstItem="H8c-UH-M6g" firstAttribute="width" secondItem="h6d-98-aUX" secondAttribute="width" id="GmQ-Iz-T1r"/>
+                                    <constraint firstItem="H8c-UH-M6g" firstAttribute="top" secondItem="h6d-98-aUX" secondAttribute="top" id="Qnz-Pe-pCb"/>
+                                    <constraint firstItem="H8c-UH-M6g" firstAttribute="leading" secondItem="h6d-98-aUX" secondAttribute="leading" id="RIv-ZG-y4J"/>
+                                    <constraint firstAttribute="bottom" secondItem="H8c-UH-M6g" secondAttribute="bottom" id="dkH-FW-grq"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GcN-xC-WEf" firstAttribute="top" secondItem="h6d-98-aUX" secondAttribute="bottom" id="EEc-pX-Whs"/>
+                            <constraint firstItem="h6d-98-aUX" firstAttribute="top" secondItem="bXU-eM-VMN" secondAttribute="top" id="XDg-aY-ZEq"/>
+                            <constraint firstItem="h6d-98-aUX" firstAttribute="leading" secondItem="bXU-eM-VMN" secondAttribute="leading" id="knI-8I-mlT"/>
+                            <constraint firstAttribute="trailing" secondItem="h6d-98-aUX" secondAttribute="trailing" id="t7B-T8-Tv1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CONTACT US" id="Eiu-VX-DFy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="NlL-XV-iiT">
+                            <connections>
+                                <action selector="onCancelButtonTapped:" destination="5vg-Ut-CQH" id="rHi-do-ia5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="SEND" id="S2C-cs-hnU">
+                            <connections>
+                                <action selector="onSendButtonTapped:" destination="5vg-Ut-CQH" id="I7m-RJ-RuR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="H8c-UH-M6g" id="gk8-5a-GlK"/>
+                        <outlet property="messageTextView" destination="PFw-Wi-tVW" id="7SN-3i-f8p"/>
+                        <outlet property="photoTapGestureRecognizer" destination="6IE-vI-GOx" id="iPu-lm-2ZA"/>
+                        <outlet property="screenTapGestureRecognizer" destination="c9B-Vd-ueO" id="Y2K-Qq-cfA"/>
+                        <outlet property="scrollView" destination="h6d-98-aUX" id="aOr-13-e7v"/>
+                        <outlet property="subjectTextView" destination="ELb-FV-OYN" id="ws4-44-3pk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfH-LT-NUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="c9B-Vd-ueO" userLabel="Screen Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="onScreenTapped:" destination="5vg-Ut-CQH" id="KOh-1z-jPP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6IE-vI-GOx" userLabel="Photo Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="onPhotoTapped:" destination="5vg-Ut-CQH" id="hZW-n2-IJ8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3791.1999999999998" y="9.4452773613193415"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IUk-Xr-gmQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vFx-qx-JeL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="1gm-XF-LxJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5vg-Ut-CQH" kind="relationship" relationship="rootViewController" id="Ycd-b8-sgB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tnb-4s-3cA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2852" y="9.4452773613193415"/>
+        </scene>
+    </scenes>
+</document>

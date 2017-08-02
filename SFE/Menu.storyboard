@@ -153,11 +153,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wp8-ea-S98">
-                                                    <rect key="frame" x="15" y="10.5" width="63" height="34"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORIES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wp8-ea-S98">
+                                                    <rect key="frame" x="15" y="10.5" width="101.5" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="ZuT-aX-zEK"/>
-                                                        <constraint firstAttribute="width" constant="63" id="dPb-4f-sMc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                                                     <color key="textColor" red="0.40709350649999998" green="0.54860040290000001" blue="0.81752539700000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,10 +177,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALERTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVR-SF-8Sq">
-                                                    <rect key="frame" x="14" y="10.5" width="94" height="34"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT US" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVR-SF-8Sq">
+                                                    <rect key="frame" x="14" y="10.5" width="160.5" height="34"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="94" id="ctO-z9-yZ2"/>
                                                         <constraint firstAttribute="height" constant="34" id="zXb-OI-YGE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
@@ -195,31 +193,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="55" id="NIj-Wc-AHV">
-                                        <rect key="frame" x="0.0" y="304" width="375" height="55"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NIj-Wc-AHV" id="bJA-yF-vqF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOB-lZ-YPp">
-                                                    <rect key="frame" x="14" y="10.5" width="68" height="34"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="68" id="7FQ-f8-mic"/>
-                                                        <constraint firstAttribute="height" constant="34" id="Xth-hy-DQc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
-                                                    <color key="textColor" red="0.40784313725490196" green="0.5490196078431373" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="OOB-lZ-YPp" firstAttribute="leading" secondItem="bJA-yF-vqF" secondAttribute="leading" constant="14" id="kp2-oa-V5U"/>
-                                                <constraint firstItem="OOB-lZ-YPp" firstAttribute="centerY" secondItem="bJA-yF-vqF" secondAttribute="centerY" id="mZS-nw-59y"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
