@@ -22,7 +22,7 @@ class CustomTextView: UITextView {
             self.placeholderLabel.sizeToFit()
         }
     }
-    var placeholderTextColor = LayoutUtils.textFieldPlaceholderTextColor
+    var placeholderTextColor = ColorUtils.textFieldPlaceholderTextColor
     
     fileprivate var shouldRemovePlaceholderOnTextChange = false
     

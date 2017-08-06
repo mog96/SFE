@@ -29,14 +29,9 @@ class MenuViewController: UIViewController {
     var numCells = 7
     
     enum ContentView: String {
-        case Profile
-        case Reel
-        case Alerts
-        case Chat
-        case Calendar
-        case Members
-        case Admin
-        case Settings
+        case Stories
+        case ContactUs
+        case About
     }
     
     override func viewDidLoad() {
@@ -77,88 +72,30 @@ extension MenuViewController {
     
     func presentContentView(_ type: ContentView) {
         switch type {
-        case .Profile: // PROFILE
-            let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-            let profileController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileNavigationController") as! UINavigationController
-            PFUser.current()?.fetchInBackground()
-            
-            self.hamburgerViewController?.contentViewController = profileController
-            
-        case .Reel: // REEL
-            let reelStoryboard = UIStoryboard(name: "Reel", bundle: nil)
-            let reelNavigationController = reelStoryboard.instantiateViewController(withIdentifier: "ReelNavigationController") as! UINavigationController
-            let firstViewController = reelNavigationController.viewControllers[0] as! ReelViewController
+        case .Stories:
+            let storyboard = UIStoryboard(name: "Stories", bundle: nil)
+            let navigationController = storyboard.instantiateViewController(withIdentifier: "StoriesNC") as! UINavigationController
+            let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
             firstViewController.menuDelegate = self
             
             UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = reelNavigationController
-            
-        case .Alerts: // ALERTS
-            let alertsStoryboard = UIStoryboard(name: "Alerts", bundle: nil)
-            let alertsNavigationController = alertsStoryboard.instantiateViewController(withIdentifier: "AlertsNC") as! UINavigationController
-            let firstViewController = alertsNavigationController.viewControllers[0] as! AlertsViewController
+            self.hamburgerViewController?.contentViewController = navigationController
+        case .ContactUs:
+            let storyboard = UIStoryboard(name: "ContactUs", bundle: nil)
+            let navigationController = storyboard.instantiateViewController(withIdentifier: "ContactUsNC") as! UINavigationController
+            let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
             firstViewController.menuDelegate = self
             
             UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = alertsNavigationController
-            
-        case .Chat: // CHAT
-            let chatStoryboard = UIStoryboard(name: "Chat", bundle: nil)
-            let chatNavigationController = chatStoryboard.instantiateViewController(withIdentifier: "ChatNavigationController") as! UINavigationController
-            let firstViewController = chatNavigationController.viewControllers[0] as! ChatViewController
+            self.hamburgerViewController?.contentViewController = navigationController
+        case .About:
+            let storyboard = UIStoryboard(name: "About", bundle: nil)
+            let navigationController = storyboard.instantiateViewController(withIdentifier: "AboutNC") as! UINavigationController
+            let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
             firstViewController.menuDelegate = self
             
             UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = chatNavigationController
-        
-        /*
-        case .Aux: // AUX
-            let storyboard = UIStoryboard(name: "Aux", bundle: nil)
-            let nc = storyboard.instantiateViewControllerWithIdentifier("AuxNC") as! AuxNavigationController
-            let firstVC = nc.viewControllers[0] as! AuxViewController
-            firstVC.menuDelegate = self
-            
-            UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Slide)
-            self.hamburgerViewController?.contentViewController = nc
-        */
-            
-        case .Calendar: // CALENDAR
-            let calendarStoryboard = UIStoryboard(name: "Calendar", bundle: nil)
-            let calendarNavigationController = calendarStoryboard.instantiateViewController(withIdentifier: "Nav") as! UINavigationController
-            let firstViewController = calendarNavigationController.viewControllers[0] as! CalendarViewController
-            firstViewController.menuDelegate = self
-            
-            UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = calendarNavigationController
-            
-        case .Members: // MEMBERS
-            let storyboard = UIStoryboard(name: "Members", bundle: nil)
-            let nc = storyboard.instantiateViewController(withIdentifier: "Members") as! UINavigationController
-            let firstViewController = nc.viewControllers[0] as! MembersViewController
-            firstViewController.menuDelegate = self
-            firstViewController.hamburgerViewController = self.hamburgerViewController
-            
-            UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = nc
-            
-        case .Admin: // ADMIN
-            let storyboard = UIStoryboard(name: "Admin", bundle: nil)
-            let nc = storyboard.instantiateViewController(withIdentifier: "AdminNC") as! UINavigationController
-            let firstVC = nc.viewControllers[0] as! AdminViewController
-            firstVC.menuDelegate = self
-            firstVC.hamburgerViewController = self.hamburgerViewController
-            
-            UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = nc
-            
-        case .Settings: // SETTINGS
-            let settingsStoryboard = UIStoryboard(name: "Settings", bundle: nil)
-            let settingsNavigationController = settingsStoryboard.instantiateViewController(withIdentifier: "SettingsNavigationController") as! UINavigationController
-            let firstViewController = settingsNavigationController.viewControllers[0] as! SettingsViewController
-            firstViewController.menuDelegate = self
-            
-            UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = settingsNavigationController
+            self.hamburgerViewController?.contentViewController = navigationController
         }
     }
 }

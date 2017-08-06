@@ -50,24 +50,3 @@ extension ContentViewController {
         self.menuDelegate.menuButtonTapped()
     }
 }
-
-
-// MARK: - Profile Presenter Delegate
-
-extension ContentViewController: ProfilePresenterDelegate {
-    func profilePresenter(wasTappedWithUser user: PFUser?) {
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileVC = storyboard.instantiateViewController(withIdentifier: "EditableProfileViewController") as! EditableProfileViewController
-        profileVC.editable = false
-        profileVC.user = user
-        self.navigationController?.pushViewController(profileVC, animated: true)
-    }
-    
-    func profilePresenter(wasTappedWithUsername username: String?) {
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileVC = storyboard.instantiateViewController(withIdentifier: "EditableProfileViewController") as! EditableProfileViewController
-        profileVC.editable = false
-        profileVC.username = username
-        self.navigationController?.pushViewController(profileVC, animated: true)
-    }
-}

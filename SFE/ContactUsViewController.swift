@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class ContactUsViewController: UIViewController {
+class ContactUsViewController: ContentViewController {
 
     @IBOutlet weak var subjectTextView: CustomTextView!
     @IBOutlet weak var messageTextView: CustomTextView!

@@ -7,15 +7,60 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var hamburgerViewController: HamburgerViewController?
+    var menuViewController: MenuViewController?
+    
+    static var allowRotation = false
+    static var isAdmin = false {
+        didSet {
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            appDelegate?.menuViewController?.checkAdmin()
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        /** CONNECT TO PARSE **/
+        if let keys = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Keys", ofType: "plist")!) {
+            // Parse config.
+            let configuration = ParseClientConfiguration {
+                $0.applicationId = keys["ParseApplicationID"] as? String
+                if let server = keys["ParseServerURL"] as? String {
+                    $0.server = server
+                } else {
+                    print("Error: No Parse Server URL found in Keys.plist.")
+                }
+            }
+            Parse.enableLocalDatastore()
+            Parse.initialize(with: configuration)
+            
+            PFUser.enableRevocableSessionInBackground { (error: Error?) -> Void in
+                print("enableRevocableSessionInBackgroundWithBlock completion:", error?.localizedDescription)
+            }
+        } else {
+            print("Error: Unable to load Keys.plist.")
+        }
+        
+        /** SET DEFAULT START VIEW **/
+        // Set up hamburger menu.
+        let menuStoryboard = UIStoryboard(name: "Menu", bundle: nil)
+        self.hamburgerViewController = menuStoryboard.instantiateViewController(withIdentifier: "HamburgerViewController") as? HamburgerViewController
+        self.menuViewController = menuStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+        self.hamburgerViewController!.menuViewController = self.menuViewController
+        self.menuViewController?.hamburgerViewController = hamburgerViewController
+        // Set initial view controller to Stories VC.
+        let storyboard = UIStoryboard(name: "Stories", bundle: nil)
+        let storiesNC = storyboard.instantiateViewController(withIdentifier: "StoriesNC") as! UINavigationController
+        self.hamburgerViewController!.contentViewController = storiesNC
+        let storiesVC = storiesNC.viewControllers[0] as! StoriesViewController
+        storiesVC.menuDelegate = self.menuViewController
+        
         return true
     }
 
@@ -43,4 +88,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

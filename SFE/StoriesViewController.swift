@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoriesViewController: UIViewController {
+class StoriesViewController: ContentViewController {
 
     @IBOutlet weak var tableView: UITableView!
     

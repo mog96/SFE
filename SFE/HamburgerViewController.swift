@@ -12,7 +12,7 @@ class HamburgerViewController: UIViewController {
     
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var deltView: DeltLoadingView!
+    @IBOutlet weak var loadingView: DeltLoadingView!
     
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
@@ -31,11 +31,11 @@ class HamburgerViewController: UIViewController {
         self.configureContentViewController()
         self.configureMenuViewController()
         
-        self.deltView.deltColor = UIColor.black
-        self.deltView.deltColorSet = [.black, .white, .red, .blue]
-        self.deltView.deltRepeatInterval = 0.05
-        self.deltView.deltFadeDuration = 0.3
-        self.deltView.isHidden = true
+        self.loadingView.deltColor = UIColor.black
+        self.loadingView.deltColorSet = [.black, .white, .red, .blue]
+        self.loadingView.deltRepeatInterval = 0.05
+        self.loadingView.deltFadeDuration = 0.3
+        self.loadingView.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

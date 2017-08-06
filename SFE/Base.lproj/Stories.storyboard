@@ -13,7 +13,7 @@
         <!--Stories View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StoriesViewController" customModule="SFE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoriesVC" id="BYZ-38-t0r" customClass="StoriesViewController" customModule="SFE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -92,7 +92,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Fr4-bi-s4l">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="No2-6V-K3e" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StoriesNC" automaticallyAdjustsScrollViewInsets="NO" id="No2-6V-K3e" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Atj-76-Q5B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
