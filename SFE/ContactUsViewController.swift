@@ -10,7 +10,9 @@ import UIKit
 import MessageUI
 
 class ContactUsViewController: ContentViewController {
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var subjectTextView: CustomTextView!
     @IBOutlet weak var messageTextView: CustomTextView!
     
@@ -49,6 +51,11 @@ class ContactUsViewController: ContentViewController {
 extension ContactUsViewController {
     @IBAction func onSendButtonTapped(_ sender: Any) {
         self.sendMessage()
+    }
+    
+    @IBAction func onScreenTapped(_ sender: Any) {
+        print("SCREEN TAPPED")
+        self.view.endEditing(true)
     }
 }
 

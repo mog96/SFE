@@ -10,6 +10,8 @@
 		2517261E1F37B84000F23207 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2517261D1F37B84000F23207 /* Keys.plist */; };
 		251726201F37C56400F23207 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517261F1F37C56400F23207 /* ColorUtils.swift */; };
 		251726251F37C94F00F23207 /* UITextView+NextTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251726241F37C94F00F23207 /* UITextView+NextTextView.swift */; };
+		251726281F37CE7200F23207 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251726271F37CE7200F23207 /* About.storyboard */; };
+		2517262A1F37CEC100F23207 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251726291F37CEC100F23207 /* AboutViewController.swift */; };
 		25550B481F325DD5007854D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25550B471F325DD5007854D2 /* AppDelegate.swift */; };
 		25550B4D1F325DD5007854D2 /* Stories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25550B4B1F325DD5007854D2 /* Stories.storyboard */; };
 		25550B4F1F325DD5007854D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25550B4E1F325DD5007854D2 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		2517261D1F37B84000F23207 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		2517261F1F37C56400F23207 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		251726241F37C94F00F23207 /* UITextView+NextTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+NextTextView.swift"; sourceTree = "<group>"; };
+		251726271F37CE7200F23207 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		251726291F37CEC100F23207 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		25550B441F325DD5007854D2 /* SFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25550B471F325DD5007854D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25550B4C1F325DD5007854D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Stories.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		251726261F37CE4E00F23207 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				251726271F37CE7200F23207 /* About.storyboard */,
+				251726291F37CEC100F23207 /* AboutViewController.swift */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
 		25550B3B1F325DD5007854D2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +112,12 @@
 		25550B461F325DD5007854D2 /* SFE */ = {
 			isa = PBXGroup;
 			children = (
+				25550B471F325DD5007854D2 /* AppDelegate.swift */,
 				25550B611F326453007854D2 /* Menu */,
+				251726261F37CE4E00F23207 /* About */,
 				25550B6B1F32729B007854D2 /* Stories */,
 				25550B641F326AAF007854D2 /* Contact Us */,
 				251726231F37C67000F23207 /* Utilities */,
-				25550B471F325DD5007854D2 /* AppDelegate.swift */,
 				25550B4E1F325DD5007854D2 /* Assets.xcassets */,
 				25550B501F325DD5007854D2 /* LaunchScreen.storyboard */,
 				25550B531F325DD5007854D2 /* Info.plist */,
@@ -214,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2517261E1F37B84000F23207 /* Keys.plist in Resources */,
+				251726281F37CE7200F23207 /* About.storyboard in Resources */,
 				25550B661F326AC9007854D2 /* ContactUs.storyboard in Resources */,
 				25550B521F325DD5007854D2 /* LaunchScreen.storyboard in Resources */,
 				25550B4F1F325DD5007854D2 /* Assets.xcassets in Resources */,
@@ -285,6 +300,7 @@
 				25550B681F326BB7007854D2 /* ContactUsViewController.swift in Sources */,
 				25550B5D1F325F7C007854D2 /* ContentViewController.swift in Sources */,
 				25550B6D1F3272AB007854D2 /* StoriesViewController.swift in Sources */,
+				2517262A1F37CEC100F23207 /* AboutViewController.swift in Sources */,
 				25550B481F325DD5007854D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9VEX7Q727F;
 				INFOPLIST_FILE = SFE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.storyforeveryone.SFE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9VEX7Q727F;
 				INFOPLIST_FILE = SFE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.storyforeveryone.SFE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -61,9 +61,6 @@
                                             <constraint firstItem="PFw-Wi-tVW" firstAttribute="top" secondItem="ELb-FV-OYN" secondAttribute="bottom" constant="13" id="j8r-OJ-RO3"/>
                                             <constraint firstItem="PFw-Wi-tVW" firstAttribute="leading" secondItem="H8c-UH-M6g" secondAttribute="leading" constant="13" id="k5M-af-s1p"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="c9B-Vd-ueO" appends="YES" id="7hU-1q-TMt"/>
-                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -76,12 +73,16 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="GcN-xC-WEf" firstAttribute="top" secondItem="h6d-98-aUX" secondAttribute="bottom" id="EEc-pX-Whs"/>
                             <constraint firstItem="h6d-98-aUX" firstAttribute="top" secondItem="bXU-eM-VMN" secondAttribute="top" id="XDg-aY-ZEq"/>
                             <constraint firstItem="h6d-98-aUX" firstAttribute="leading" secondItem="bXU-eM-VMN" secondAttribute="leading" id="knI-8I-mlT"/>
                             <constraint firstAttribute="trailing" secondItem="h6d-98-aUX" secondAttribute="trailing" id="t7B-T8-Tv1"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2rx-Ba-4PU" appends="YES" id="htY-Uf-FjT"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="CONTACT US" id="Eiu-VX-DFy">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="NlL-XV-iiT">
@@ -98,21 +99,14 @@
                     <connections>
                         <outlet property="containerView" destination="H8c-UH-M6g" id="gk8-5a-GlK"/>
                         <outlet property="messageTextView" destination="PFw-Wi-tVW" id="7SN-3i-f8p"/>
-                        <outlet property="photoTapGestureRecognizer" destination="6IE-vI-GOx" id="iPu-lm-2ZA"/>
-                        <outlet property="screenTapGestureRecognizer" destination="c9B-Vd-ueO" id="Y2K-Qq-cfA"/>
                         <outlet property="scrollView" destination="h6d-98-aUX" id="aOr-13-e7v"/>
                         <outlet property="subjectTextView" destination="ELb-FV-OYN" id="ws4-44-3pk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfH-LT-NUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="c9B-Vd-ueO" userLabel="Screen Tap Gesture Recognizer">
+                <tapGestureRecognizer id="2rx-Ba-4PU">
                     <connections>
-                        <action selector="onScreenTapped:" destination="5vg-Ut-CQH" id="KOh-1z-jPP"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="6IE-vI-GOx" userLabel="Photo Tap Gesture Recognizer">
-                    <connections>
-                        <action selector="onPhotoTapped:" destination="5vg-Ut-CQH" id="hZW-n2-IJ8"/>
+                        <action selector="onScreenTapped:" destination="5vg-Ut-CQH" id="5qw-mw-4GF"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

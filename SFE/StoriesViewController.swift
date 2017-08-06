@@ -17,6 +17,8 @@ class StoriesViewController: ContentViewController {
 
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 285
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,4 +37,20 @@ class StoriesViewController: ContentViewController {
     }
     */
 
+}
+
+extension StoriesViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: "StoryCell")!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        print("SELECTED ROW ", indexPath.row)
+    }
 }

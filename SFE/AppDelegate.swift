@@ -61,6 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storiesVC = storiesNC.viewControllers[0] as! StoriesViewController
         storiesVC.menuDelegate = self.menuViewController
         
+        // Does exactly the same as arrow in storyboard. ("100% parity." --Tim Lee)
+        window?.rootViewController = self.hamburgerViewController
+        
         return true
     }
 

@@ -58,7 +58,7 @@ extension MenuViewController {
         case .About:
             let storyboard = UIStoryboard(name: "About", bundle: nil)
             let navigationController = storyboard.instantiateViewController(withIdentifier: "AboutNC") as! UINavigationController
-            let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
+            let firstViewController = navigationController.viewControllers[0] as! AboutViewController
             firstViewController.menuDelegate = self
             
             UIApplication.shared.setStatusBarHidden(false, with: .slide)
@@ -74,7 +74,7 @@ extension MenuViewController {
         case .ContactUs:
             let storyboard = UIStoryboard(name: "ContactUs", bundle: nil)
             let navigationController = storyboard.instantiateViewController(withIdentifier: "ContactUsNC") as! UINavigationController
-            let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
+            let firstViewController = navigationController.viewControllers[0] as! ContactUsViewController
             firstViewController.menuDelegate = self
             
             UIApplication.shared.setStatusBarHidden(false, with: .slide)

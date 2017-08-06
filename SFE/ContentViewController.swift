@@ -19,6 +19,15 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         self.appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        // Set navigation bar menu button.
+        let menuButton = UIButton(type: UIButtonType.custom)
+        let menuImage = UIImage(named: "menu_icon_black")
+        menuButton.setImage(menuImage, for: UIControlState())
+        menuButton.frame = CGRect(x: 5, y: 0, width: 17, height: 11)
+        menuButton.addTarget(self, action: #selector(ContentViewController.menuTapped), for: UIControlEvents.touchUpInside)
+        let menuBarButton = UIBarButtonItem(customView: menuButton)
+        self.navigationItem.leftBarButtonItem = menuBarButton
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,17 +41,6 @@ class ContentViewController: UIViewController {
 // MARK: - Helpers
 
 extension ContentViewController {
-    func setMenuButton(withColor color: String) {
-        let menuButton = UIButton(type: UIButtonType.custom)
-        let menuImage = UIImage(named: "menu_icon_" + color + ".png")
-        menuButton.setImage(menuImage, for: UIControlState())
-        menuButton.frame = CGRect(x: 5, y: 0, width: 17, height: 11)
-        menuButton.addTarget(self, action: #selector(ContentViewController.menuTapped), for: UIControlEvents.touchUpInside)
-        
-        let menuBarButton = UIBarButtonItem(customView: menuButton)
-        self.navigationItem.leftBarButtonItem = menuBarButton
-    }
-    
     func menuTapped() {
         
         print("MENU TAPPED")
