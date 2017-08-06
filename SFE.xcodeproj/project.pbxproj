@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2517261E1F37B84000F23207 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2517261D1F37B84000F23207 /* Keys.plist */; };
 		251726201F37C56400F23207 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517261F1F37C56400F23207 /* ColorUtils.swift */; };
-		251726221F37C66400F23207 /* PositiveLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251726211F37C66400F23207 /* PositiveLoadingView.swift */; };
+		251726251F37C94F00F23207 /* UITextView+NextTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251726241F37C94F00F23207 /* UITextView+NextTextView.swift */; };
 		25550B481F325DD5007854D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25550B471F325DD5007854D2 /* AppDelegate.swift */; };
 		25550B4D1F325DD5007854D2 /* Stories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25550B4B1F325DD5007854D2 /* Stories.storyboard */; };
 		25550B4F1F325DD5007854D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25550B4E1F325DD5007854D2 /* Assets.xcassets */; };
@@ -17,7 +17,6 @@
 		25550B5D1F325F7C007854D2 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25550B591F325F7C007854D2 /* ContentViewController.swift */; };
 		25550B5E1F325F7C007854D2 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25550B5A1F325F7C007854D2 /* HamburgerViewController.swift */; };
 		25550B5F1F325F7C007854D2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25550B5B1F325F7C007854D2 /* MenuViewController.swift */; };
-		25550B601F325F7C007854D2 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25550B5C1F325F7C007854D2 /* ProfileCell.swift */; };
 		25550B631F3264A2007854D2 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25550B621F3264A2007854D2 /* Menu.storyboard */; };
 		25550B661F326AC9007854D2 /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25550B651F326AC9007854D2 /* ContactUs.storyboard */; };
 		25550B681F326BB7007854D2 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25550B671F326BB7007854D2 /* ContactUsViewController.swift */; };
@@ -30,7 +29,7 @@
 		059F1C23CE369A046714EEF9 /* Pods_SFE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2517261D1F37B84000F23207 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		2517261F1F37C56400F23207 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
-		251726211F37C66400F23207 /* PositiveLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositiveLoadingView.swift; sourceTree = "<group>"; };
+		251726241F37C94F00F23207 /* UITextView+NextTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+NextTextView.swift"; sourceTree = "<group>"; };
 		25550B441F325DD5007854D2 /* SFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25550B471F325DD5007854D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25550B4C1F325DD5007854D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Stories.storyboard; sourceTree = "<group>"; };
@@ -40,7 +39,6 @@
 		25550B591F325F7C007854D2 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		25550B5A1F325F7C007854D2 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
 		25550B5B1F325F7C007854D2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		25550B5C1F325F7C007854D2 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		25550B621F3264A2007854D2 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		25550B651F326AC9007854D2 /* ContactUs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
 		25550B671F326BB7007854D2 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +73,7 @@
 			children = (
 				2517261F1F37C56400F23207 /* ColorUtils.swift */,
 				25550B691F326CB5007854D2 /* CustomTextView.swift */,
-				251726211F37C66400F23207 /* PositiveLoadingView.swift */,
+				251726241F37C94F00F23207 /* UITextView+NextTextView.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -121,7 +119,6 @@
 				25550B591F325F7C007854D2 /* ContentViewController.swift */,
 				25550B5A1F325F7C007854D2 /* HamburgerViewController.swift */,
 				25550B5B1F325F7C007854D2 /* MenuViewController.swift */,
-				25550B5C1F325F7C007854D2 /* ProfileCell.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -284,9 +281,8 @@
 				25550B5E1F325F7C007854D2 /* HamburgerViewController.swift in Sources */,
 				25550B5F1F325F7C007854D2 /* MenuViewController.swift in Sources */,
 				25550B6A1F326CB5007854D2 /* CustomTextView.swift in Sources */,
-				251726221F37C66400F23207 /* PositiveLoadingView.swift in Sources */,
+				251726251F37C94F00F23207 /* UITextView+NextTextView.swift in Sources */,
 				25550B681F326BB7007854D2 /* ContactUsViewController.swift in Sources */,
-				25550B601F325F7C007854D2 /* ProfileCell.swift in Sources */,
 				25550B5D1F325F7C007854D2 /* ContentViewController.swift in Sources */,
 				25550B6D1F3272AB007854D2 /* StoriesViewController.swift in Sources */,
 				25550B481F325DD5007854D2 /* AppDelegate.swift in Sources */,

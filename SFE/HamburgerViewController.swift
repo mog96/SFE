@@ -12,7 +12,6 @@ class HamburgerViewController: UIViewController {
     
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var loadingView: DeltLoadingView!
     
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
@@ -30,12 +29,6 @@ class HamburgerViewController: UIViewController {
         
         self.configureContentViewController()
         self.configureMenuViewController()
-        
-        self.loadingView.deltColor = UIColor.black
-        self.loadingView.deltColorSet = [.black, .white, .red, .blue]
-        self.loadingView.deltRepeatInterval = 0.05
-        self.loadingView.deltFadeDuration = 0.3
-        self.loadingView.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,15 +101,12 @@ extension HamburgerViewController {
         UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: { () -> Void in
             self.contentView.frame.origin = CGPoint(x: 0, y: 0)
             }, completion: { (finished: Bool) -> Void in
-                if !self.contentViewController!.isKind(of: EditableProfileViewController.self) {
-                    UIApplication.shared.setStatusBarHidden(false, with: .slide)
-                }
                 self.menuShown = false
                 self.tapGestureRecognizer.isEnabled = false
                 for subview in self.contentView.subviews {
                     subview.isUserInteractionEnabled = true
                 }
-                self.deltView.stopAnimating()
+                // self.deltView.stopAnimating()
         })
     }
     

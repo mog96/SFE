@@ -60,15 +60,16 @@ extension ContactUsViewController {
 extension ContactUsViewController: MFMailComposeViewControllerDelegate {
     func sendMessage() {
         if MFMailComposeViewController.canSendMail() {
-            var subject = self.subjectTextView.text
-            let recipient = "mateog@stanford.edu"
-            var body = self.messageTextView.text
-
             let mailComposeVC = MFMailComposeViewController()
-            mailComposeVC.mailComposeDelegate = self
-            mailComposeVC.setSubject(subject)
+            let recipient = "misterjokela@gmail.com"
             mailComposeVC.setToRecipients([recipient])
-            mailComposeVC.setMessageBody(body, isHTML: false)
+            mailComposeVC.mailComposeDelegate = self
+            if let subject = self.subjectTextView.text {
+                mailComposeVC.setSubject(subject)
+            }
+            if let body = self.messageTextView.text {
+                mailComposeVC.setMessageBody(body, isHTML: false)
+            }
             self.present(mailComposeVC, animated: true, completion: nil)
             
         } else {

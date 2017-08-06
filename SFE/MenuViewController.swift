@@ -24,9 +24,7 @@ class MenuViewController: UIViewController {
     let kProfileCellHeight: CGFloat = 172
     let kMenuCellHeight: CGFloat = 55
     
-    let kMinCells = 7
-    let kMaxCells = 8
-    var numCells = 7
+    var numCells = 3
     
     enum ContentView: String {
         case Stories
@@ -45,10 +43,6 @@ class MenuViewController: UIViewController {
         self.tableView.canCancelContentTouches = false
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.checkAdmin()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,19 +53,16 @@ class MenuViewController: UIViewController {
 // MARK: - Helpers
 
 extension MenuViewController {
-    func checkAdmin() {
-        if AppDelegate.isAdmin {
-            self.numCells = kMaxCells
-        } else {
-            self.numCells = kMinCells
-        }
-        if self.tableView != nil {
-            self.tableView.reloadData()
-        }
-    }
-    
     func presentContentView(_ type: ContentView) {
         switch type {
+        case .About:
+            let storyboard = UIStoryboard(name: "About", bundle: nil)
+            let navigationController = storyboard.instantiateViewController(withIdentifier: "AboutNC") as! UINavigationController
+            let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
+            firstViewController.menuDelegate = self
+            
+            UIApplication.shared.setStatusBarHidden(false, with: .slide)
+            self.hamburgerViewController?.contentViewController = navigationController
         case .Stories:
             let storyboard = UIStoryboard(name: "Stories", bundle: nil)
             let navigationController = storyboard.instantiateViewController(withIdentifier: "StoriesNC") as! UINavigationController
@@ -83,14 +74,6 @@ extension MenuViewController {
         case .ContactUs:
             let storyboard = UIStoryboard(name: "ContactUs", bundle: nil)
             let navigationController = storyboard.instantiateViewController(withIdentifier: "ContactUsNC") as! UINavigationController
-            let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
-            firstViewController.menuDelegate = self
-            
-            UIApplication.shared.setStatusBarHidden(false, with: .slide)
-            self.hamburgerViewController?.contentViewController = navigationController
-        case .About:
-            let storyboard = UIStoryboard(name: "About", bundle: nil)
-            let navigationController = storyboard.instantiateViewController(withIdentifier: "AboutNC") as! UINavigationController
             let firstViewController = navigationController.viewControllers[0] as! StoriesViewController
             firstViewController.menuDelegate = self
             
@@ -108,25 +91,11 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         var cell: UITableViewCell!
         switch indexPath.row {
         case 0:
-            cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell")!
+            cell = tableView.dequeueReusableCell(withIdentifier: "AboutCell")!
         case 1:
-            cell = tableView.dequeueReusableCell(withIdentifier: "ReelCell")!
-        case 2:
-            cell = tableView.dequeueReusableCell(withIdentifier: "AlertsCell")!
-        case 3:
-            cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell")!
-        /*
-        case 4:
-            cell = tableView.dequeueReusableCellWithIdentifier("AuxCell")!
-        */
-        case 4:
-            cell = tableView.dequeueReusableCell(withIdentifier: "CalendarCell")!
-        case 5:
-            cell = tableView.dequeueReusableCell(withIdentifier: "MembersCell")!
-        case 7:
-            cell = tableView.dequeueReusableCell(withIdentifier: "AdminCell")!
-        default:
-            cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell")!
+            cell = tableView.dequeueReusableCell(withIdentifier: "StoriesCell")!
+        default: // case 2:
+            cell = tableView.dequeueReusableCell(withIdentifier: "ContactUsCell")!
         }
         
         cell.frame.size.height = self.kMenuCellHeight
@@ -152,29 +121,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         print(indexPath.row)
         
         let cellType = ContentView.init(rawValue: tableView.cellForRow(at: indexPath)!.reuseIdentifier!.replacingOccurrences(of: "Cell", with: ""))!
-        
-        var deltLoadingViewDeltColor = UIColor.black
-        switch cellType {
-        case .Profile:
-            deltLoadingViewDeltColor = .white
-        case .Reel:
-            deltLoadingViewDeltColor = .red
-        case .Alerts:
-            deltLoadingViewDeltColor = .blue
-        case .Chat:
-            deltLoadingViewDeltColor = .blue
-        case .Calendar:
-            deltLoadingViewDeltColor = .red
-        case .Members:
-            deltLoadingViewDeltColor = .white
-        case .Admin:
-            deltLoadingViewDeltColor = .white
-        case .Settings:
-            deltLoadingViewDeltColor = .white
-        }
-        
-        self.hamburgerViewController?.deltView.deltColor = deltLoadingViewDeltColor
-        self.hamburgerViewController?.deltView.startAnimating()
         self.presentContentView(cellType)
     }
 }
@@ -185,7 +131,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
 extension MenuViewController: MenuDelegate {
     func menuButtonTapped() {
         
-        print("SHOW HIDE MENU")
+        print("SHOW/HIDE MENU")
         
         self.hamburgerViewController?.showOrHideMenu()
     }

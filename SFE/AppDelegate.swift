@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var isAdmin = false {
         didSet {
             let appDelegate = UIApplication.shared.delegate as? AppDelegate
-            appDelegate?.menuViewController?.checkAdmin()
+            // TODO: Make 'add story' button visible
         }
     }
 
